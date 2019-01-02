@@ -3,14 +3,9 @@
 # purporse: change white background to transparent state
 import argparse
 from PIL import Image
-if __name__ == '__main__':
-    parser = argparse.ArgumentParser()
-    parser.add_argument('img_name', help='input image name')
-    parser.add_argument('--threshold', type=int, default=240, help='threshold for transparency mask')
-    args = parser.parse_args()
-    threshold = args.threshold
+def background_mask(img_name, threshold):
     try:
-        img = Image.open(args.img_name)
+        img = Image.open(img_name)
     except FileNotFoundError as e:
         raise e        
     if(img.mode == 'CMYK'):
@@ -34,5 +29,11 @@ if __name__ == '__main__':
                 pixels[i,j] = 255
     img.putalpha(alpha)
     img.save(args.img_name.split('.')[0] + '_mask.png')
-                
+ 
+if __name__ == '__main__':
+    parser = argparse.ArgumentParser()
+    parser.add_argument('img_name', help='input image name')
+    parser.add_argument('--threshold', type=int, default=240, help='threshold for transparency mask')
+    args = parser.parse_args()
+    background_mask(args.img_name, args.threshold)               
             
