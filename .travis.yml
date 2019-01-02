@@ -1,15 +1,16 @@
 language: python
 python:
-  - "2.6"
-  - "3.6"
-  - "3.7"
-
+- '2.7'
+- '3.6'
+- '3.7'
 install:
-  - pip install .
+- pip install .
 script:
-  - python -c "import background_mask"
+- python -c "import background_mask"
 deploy:
   provider: pypi
-  user: "zhaofeng-shu33"
-  password: ""
-
+  user: zhaofeng-shu33
+  password:
+    secure: ShdW+Ourx/EoRro9VZRJSuxbt+unG4nduYIvjFHq2wgHdNvAet/SWKSbxDJVp/aCB4zj4f9yuOpHZCcoOX5DY9lWQZDgIy5b7XQKr5QUxvFfD9tN0dThaBoaD0yHiot2Bb25RY+uElv3kiAdYwd53ycPGmAU1GRUg8kmr7ULXI0USsIrXvm72ZLW3Vi92HTeGVxOM+t4Tc9WPxplHLGl0vk/0yv+ueHwD3MoqClRrF6Gxb4pRq76Els1LmQT8TfTUjxHwXi0tj2k2NUFsOMFq07P8AIFzxde5dTT8SObQPh2f/hR9FuppUQ4S1VAj5tD2N3sYvzdWv61Sw9wpyjbIM8LKB5ncEASeAlEq2BbJbhjn0nryJ2dsujbadZMxSI3QNvumIYJQKYed5PMMkm5ZnFJgHXiJtS/aqgyOL7R5CLchR0uzyS/4kZYXXx7VVS798fYEWn7MTtB/H+WJEPG82LFCJnSziYQi8m5V3eIZoBe9o7xYzQIdSb5T7DBLWWStVNRdTOvFH1XAlofSGdUqG2eU3K0NYeMO0sEmV6HHeLUedXyoxk4nETa/2l5GH3vDAqtvGpAyBwTszTwy2TkWxPXSfzGi2/A2IbxyhGW05o35qpXL6Sf/Of0Zg20uwW0Zl1tNrPgR12lQVPAj/GhD0bdvriwnWYh5UXv5qHTmRw=i
+  on:
+    tags: true
