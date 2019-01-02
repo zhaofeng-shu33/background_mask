@@ -17,6 +17,7 @@ if __name__ == '__main__':
           install_requires = ['Pillow'],
           license = 'Apache License Version 2.0',
           py_modules = ['background_mask'],
+          entry_points = {'console_scripts': ['background_mask = background_mask:_main']},
           classifiers = (
               "Development Status :: 4 - Beta",
               "Programming Language :: Python :: 3.7",
