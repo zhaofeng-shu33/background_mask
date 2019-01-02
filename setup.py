@@ -5,7 +5,7 @@ with open("README.md") as fh:
     
 if __name__ == '__main__':
     setup(name = 'background_mask',
-          version = '0.1',
+          version = '0.2',
           description = 'make white part of a picture transparent',
           author = 'zhaofeng-shu33',
           author_email = '616545598@qq.com',
