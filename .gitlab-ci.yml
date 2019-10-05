@@ -1,0 +1,5 @@
+job1:
+  tags:
+   - self-hosted
+  script:
+   - pwd
