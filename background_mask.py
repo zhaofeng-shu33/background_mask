@@ -28,7 +28,7 @@ def background_mask(img_name, threshold):
             else:
                 pixels[i,j] = 255
     img.putalpha(alpha)
-    img.save(args.img_name.split('.')[0] + '_mask.png')
+    img.save(img_name.split('.')[0] + '_mask.png')
 def _main(): 
     parser = argparse.ArgumentParser()
     parser.add_argument('img_name', help='input image name')
